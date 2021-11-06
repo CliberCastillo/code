@@ -1,0 +1,53 @@
+﻿//Querys
+{
+  Products
+  {
+    Name
+    Description
+  }
+}
+
+//Querys with errors
+{
+  Products
+  {
+    Nam
+    Description
+  }
+}
+
+//Query types of schemas
+{
+  __schema{
+    types{
+      name
+    }
+  }
+}
+
+//Query type enums
+{
+  Products{
+    Type
+  }
+}
+
+//Query whit parameters
+{
+  Product(Id:1){
+    Name
+  }
+}
+
+
+{
+  Product(Id:2){
+    Name,
+    Description,
+    Type,
+    Price,
+    Reviews{
+      Title
+    }
+  }
+}

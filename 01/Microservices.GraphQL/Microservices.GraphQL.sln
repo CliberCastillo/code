@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.GraphQL.API", "Microservices.GraphQL.API\Microservices.GraphQL.API.csproj", "{9283E908-1BF5-4DA6-8535-63F76E411FD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.GraphQL.Client.MVC", "Microservices.GraphQL.Client.MVC\Microservices.GraphQL.Client.MVC.csproj", "{D89A4359-4186-4F7E-AA21-21C4D11F3A90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.GraphQL.Client.Angular", "Microservices.GraphQL.Client.Angular\Microservices.GraphQL.Client.Angular.csproj", "{BF13F45A-CEF8-445B-A249-4D4C60BFBC6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9283E908-1BF5-4DA6-8535-63F76E411FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9283E908-1BF5-4DA6-8535-63F76E411FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9283E908-1BF5-4DA6-8535-63F76E411FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9283E908-1BF5-4DA6-8535-63F76E411FD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89A4359-4186-4F7E-AA21-21C4D11F3A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89A4359-4186-4F7E-AA21-21C4D11F3A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89A4359-4186-4F7E-AA21-21C4D11F3A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89A4359-4186-4F7E-AA21-21C4D11F3A90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF13F45A-CEF8-445B-A249-4D4C60BFBC6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF13F45A-CEF8-445B-A249-4D4C60BFBC6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF13F45A-CEF8-445B-A249-4D4C60BFBC6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF13F45A-CEF8-445B-A249-4D4C60BFBC6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F57356B0-371B-407E-98BF-4A7EBDFC6972}
+	EndGlobalSection
+EndGlobal
