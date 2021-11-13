@@ -1,0 +1,191 @@
+https://hub.docker.com/
+https://github.com/dotnet/dotnet-docker
+
+Docker WSL 
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+https://docs.docker.com/docker-for-windows/wsl/
+https://docs.microsoft.com/en-us/windows/wsl/wsl-config
+
+PS C:\Program Files\Docker\Docker> .\DockerCli -SwitchLinuxEngine
+PS C:\Program Files\Docker\Docker> .\DockerCli -SwitchWindowsEngine
+
+-----------------------------------
+docker container ls -a
+docker rm $(docker ps -a -q)
+docker stop $(docker ps -a -q)
+
+Remove all stopped containers
+docker container ls -a --filter status=exited --filter status=created 
+docker container prune
+
+Stop and remove all containers
+docker container stop $(docker container ls -aq)
+docker container rm $(docker container ls -aq)
+
+remove all images
+docker rmi $(docker images -a -q)
+-----------------------------------
+
+(server Linux)
+docker version 
+
+Get-VM
+
+https://hub.docker.com/_/microsoft-dotnet-core-runtime/
+
+docker run --rm -it mcr.microsoft.com/dotnet/runtime:5.0 dotnet
+docker run --rm -it mcr.microsoft.com/dotnet/runtime:5.0 dotnet dotnet --info
+switch windows
+
+(server Windows)
+docker version 
+
+docker run --rm -it mcr.microsoft.com/dotnet/runtime:5.0 dotnet
+docker run --rm -it mcr.microsoft.com/dotnet/runtime:5.0 dotnet --info
+
+cd 02 - Microservices\Microservice.Docker\02.1\Microservice.Docker.Api
+dotnet --version
+dotnet run
+
+docker run --rm -it mcr.microsoft.com/dotnet/runtime:5.0
+windows
+---------
+docker run --rm -it -v ${PWD}:"c:\Microservice.Docker.Api" mcr.microsoft.com/dotnet/runtime:5.0
+linux
+---------
+docker run --rm -it -v ${PWD}:"/Microservice.Docker.Api" mcr.microsoft.com/dotnet/runtime:5.0
+
+in host
+-------
+echo HELLO > world.txt
+del world.txt
+dotnet publish
+dotnet .\bin\Debug\netcoreapp3.1\publish\Microservice.Docker.Api.dll
+
+windows
+-------
+docker run --rm -it -v ${PWD}:"c:\Microservice.Docker.Api" mcr.microsoft.com/dotnet/aspnet:5.0
+dotnet .\bin\Debug\net5.0\publish\Microservice.Docker.Api.dll
+
+linux
+-----
+docker run --rm -it -v ${PWD}:"/Microservice.Docker.Api" mcr.microsoft.com/dotnet/aspnet:5.0
+dotnet bin/Debug/net5.0/publish/Microservice.Docker.Api.dll
+
+docker ps
+docker inspect 4a6d4e14bd8b
+172.24.188.159
+
+windows
+-------
+docker run --rm -it -v ${PWD}:"c:\Microservice.Docker.Api" -p 8085:80 mcr.microsoft.com/dotnet/aspnet:5.0
+dotnet .\bin\Debug\netcoreapp3.1\publish\Microservice.Docker.Api.dll
+
+Linux
+-----
+docker run --rm -it -v ${PWD}:"/Microservice.Docker.Api" -p 8085:80 mcr.microsoft.com/dotnet/aspnet:5.0
+dotnet ./Microservice.Docker.Api/bin/Debug/net5.0/publish/Microservice.Docker.Api.dll
+
+docker run --rm weshigbee/manifest-tool
+docker run --rm weshigbee/manifest-tool inspect mcr.microsoft.com/dotnet/runtime:5.0
+
+02.2
+==============================
+(Generar Docker file)
+windows
+-------
+docker run --rm -it -v ${PWD}:"c:\Microservice1.Docker.Api" -p 8085:80 mcr.microsoft.com/dotnet/aspnet:5.0
+
+linux
+-------
+docker run --rm -it -v ${PWD}:"/Microservice1.Docker.Api" -p 8085:80 mcr.microsoft.com/dotnet/aspnet:5.0
+
+in host
+-------
+dotnet publish
+#if error in COPY add .gitignore
+docker build -t microservicesdotnet/generator .
+docker image ls
+docker run --rm -it -p 8085:80 microservicesdotnet/generator
+
+docker login
+docker build -t microservicesdotnet/generator .
+docker run --rm -it -p 8085:80 microservicesdotnet/generator
+docker push microservicesdotnet/generator
+docker run --rm -it -p 8085:80 microservicesdotnet/generator
+
+docker ps -a
+docker build -t microservicesdotnet/generator --rm=false --no-cache .
+docker inspect microservicesdotnet/generator
+
+(win)
+docker run --rm -it -v ${PWD}:"c:\Microservice.Docker.Api" -p 8085:80 mcr.microsoft.com/dotnet/sdk:5.0
+(lin)
+docker run --rm -it -v ${PWD}:"/Microservice.Docker.Api" -p 8085:80 mcr.microsoft.com/dotnet/sdk:5.0
+dotnet --info
+dotnet help
+rm -rf bin/ obj/
+ls -al
+dotnet restore
+dotnet build
+dotnet publish
+dotnet dev-certs https
+dotnet run
+#in other instance from docker
+curl -L -k localhost:5000/swagger/index.html     (En la ruta del publish)
+
+docker run --rm -it -v ${PWD}:"/Microservice.Docker.Api" -p 8085:80 mcr.microsoft.com/dotnet/sdk:5.0
+export ASPNETCORE_URLS=http://+:80
+dotnet restore
+dotnet build
+dotnet Microservice.Docker.Api.dll
+http://localhost:8085/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+docker events --format "{{json .}}"
+"Attributes":{"exitCode":"0","image":"nginx","maintainer":"NGINX Docker Maintainers <docker-maint@nginx.com>","name":"reverent_ganguly"}
+docker stop reverent_ganguly
+
+----Build 02.3
+docker build --rm=false --no-cache -t test .
+(Crear un docker file de build)
+docker build -t microservicesdotnet/generator:build .
+docker run --rm -it -p 8085:80 -p 8086:443 microservicesdotnet/generator:build   (Si falla el restore verificar la tarjeta de red virtual debe ser asignada una tarjeta fisica que tenga acceso a internet) 
+https://localhost:8086/
+
+
+--------Stages 02.4
+docker image ls microservicesdotnet/generator
+(Crear un docker file con 2 stage's)
+docker build --rm=false --no-cache -t microservicesdotnet/generator:Multi .
+docker image ls microservicesdotnet/generator
+docker run --rm -it -p 8085:80 microservicesdotnet/generator:Multi
+http://localhost:8085/
+
+----Docker compose 02.5
+(Generar un archivo docker-compose.yml)
+docker-compose h
+docker-compose up
+docker-compose up -d
+docker ps
+docker-compose logs
+docker-compose down
+docker ps
+docker image ls
+docker image rm microservicesdotnet/generator:Multi
+docker image ls
+docker-compose up -d
+docker image ls
+(mail solo en contendores linux)
+docker-compose up -d
+docker ps
+(agregar llamada de correo)
+dotnet restore
+dotnet build
+dotnet run
+docker-compose ps
+docker-compose up -d --build
+(No funcionara pues se necesita asignar un ip/nombre de host "mail" al server de correo)
+docker-compose up -d --build
+docker-compose down
+

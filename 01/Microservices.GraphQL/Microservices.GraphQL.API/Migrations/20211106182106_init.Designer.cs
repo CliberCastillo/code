@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Microservices.GraphQL.API.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20210807042916_init")]
+    [Migration("20211106182106_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
