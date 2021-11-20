@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+########################################################## microservices.demo.policy.db ##################################################################################
+  sqlserver2019:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+       - 1433:1433 
+    environment:
+      - SA_PASSWORD=Password1234
+      - ACCEPT_EULA=Y
+    networks:
+      - backend
+########################################################## microservices.demo.rabbitmq ####################################################################################
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+       - 15672:15672
+       - 35197:35197
+       - 4369:4369
+       - 55672:55672
+       - 5672:5672
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin    
+    networks:
+      - backend
+########################################################## networks #######################################################################################################
+networks:
+  backend:
+    name: backend
+    driver: bridge
+

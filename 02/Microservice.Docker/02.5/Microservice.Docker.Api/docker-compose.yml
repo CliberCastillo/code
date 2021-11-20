@@ -6,7 +6,7 @@ services:
             context: .
         image: microservicesdotnet/generator:Multi
         ports: 
-            - "80:80"
+            - "8085:80"
     mail:
         image: mailhog/mailhog
         ports: 
