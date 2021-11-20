@@ -1,35 +1,45 @@
 ﻿{
+   "CodeGenerationMode": 0,
    "ContextClassName": "MicroservicePersistenceEFcoreContext",
    "ContextNamespace": null,
    "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
    "IncludeConnectionString": false,
    "ModelNamespace": null,
    "OutputContextPath": "Data\/Contexts",
    "OutputPath": "Data\/Entities",
    "ProjectRootNamespace": "Microservice.Persistence.EFCore",
+   "Schemas": null,
    "SelectedHandlebarsLanguage": 0,
    "SelectedToBeGenerated": 0,
    "Tables": [
       {
-         "HasPrimaryKey": true,
-         "Name": "[dbo].[Order]"
+         "Name": "[dbo].[Order]",
+         "ObjectType": 0
       },
       {
-         "HasPrimaryKey": true,
-         "Name": "[dbo].[OrderItem]"
+         "Name": "[dbo].[OrderItem]",
+         "ObjectType": 0
       },
       {
-         "HasPrimaryKey": true,
-         "Name": "[dbo].[Product]"
+         "Name": "[dbo].[Product]",
+         "ObjectType": 0
       }
    ],
+   "UiHint": "58c656cf59b2.Microservice.Persistence.EFCoreDB",
+   "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
    "UseDbContextSplitting": true,
    "UseFluentApiOnly": true,
    "UseHandleBars": false,
    "UseInflector": true,
    "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
    "UseNodaTime": false,
-   "UseSpatial": false,
-   "UseStoredProcedures": false
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
 }

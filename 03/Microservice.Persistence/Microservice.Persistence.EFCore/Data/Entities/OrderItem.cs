@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 
+#nullable disable
+
 namespace Microservice.Persistence.EFCore.Data.Entities
 {
     public partial class OrderItem

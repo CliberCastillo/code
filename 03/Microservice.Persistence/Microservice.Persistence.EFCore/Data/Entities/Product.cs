@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 
+#nullable disable
+
 namespace Microservice.Persistence.EFCore.Data.Entities
 {
     public partial class Product
@@ -15,6 +17,7 @@ namespace Microservice.Persistence.EFCore.Data.Entities
         public string Description { get; set; }
         public decimal? Price { get; set; }
         public string Unit { get; set; }
+        public string Type { get; set; }
 
         public virtual ICollection<OrderItem> OrderItems { get; set; }
     }

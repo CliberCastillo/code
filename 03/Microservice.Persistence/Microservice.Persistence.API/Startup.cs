@@ -30,8 +30,8 @@ namespace Microservice.Persistence.API
         public void ConfigureServices(IServiceCollection services)
         {
             ////////////////////////////////// EF CORE ////////////////////////////////////////////////////
-            string conn = Configuration.GetConnectionString("Microservice.Persistence.EFCoreDB");
-            //string conn = Configuration.GetConnectionString("Microservice.Persistence.EFCoreDB.azure");
+            //string conn = Configuration.GetConnectionString("Microservice.Persistence.EFCoreDB");
+            string conn = Configuration.GetConnectionString("Microservice.Persistence.EFCoreDB.azure");
             services.AddDbContext<MicroservicePersistenceEFcoreContext>(opt =>
             {
                 opt.UseSqlServer(conn);

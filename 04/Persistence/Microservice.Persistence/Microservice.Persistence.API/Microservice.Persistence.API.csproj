@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microservice.Persistence.EFCore\Microservice.Persistence.EFCore.csproj" />
+    <ProjectReference Include="..\Microservice.Persistence.NoSQL.Cosmo\Microservice.Persistence.NoSQL.Cosmo.EFCore.csproj" />
+    <ProjectReference Include="..\Microservice.Persistence.NoSQL.Mongo\Microservice.Persistence.NoSQL.Mongo.csproj" />
+  </ItemGroup>
+
+
+</Project>
