@@ -56,7 +56,7 @@ namespace Microservice.Persistence.API
             services.AddDbContext<OrderNoSqlContext>(opt =>
             {
                 opt.UseCosmos("https://usrsqlcosmopersistence.documents.azure.com:443/",
-                    "PzHoc7PVOr9t6kKnFpTuuHShtDnq8UJOrycpEljfWmPYcfEt9rJzsngWbPIwQxVUBejanbbWVNviSHZ7FKzjgg==",
+                    "pjDn1CMH9QSS8Z7vHxI4Hoc2hvRtH2BIeidpZ8qFSOT75qRo5niSPRPOcGINQSiCphp1Dg47MsHN8cvx9DBMug==",
                     databaseName: "OrdersDB");
             });
 
