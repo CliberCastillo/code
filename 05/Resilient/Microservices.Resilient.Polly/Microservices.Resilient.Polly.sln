@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Resilient.Polly.API", "Microservices.Resilient.Polly.API\Microservices.Resilient.Polly.API.csproj", "{9B3088C1-8ED7-48DB-8C47-B19E49FB8585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Resilient.Polly.Client.Console", "Microservices.Resilient.Polly.Client.Console\Microservices.Resilient.Polly.Client.Console.csproj", "{0AAC3308-ED62-40B8-9C85-70C9F60AF469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Resilient.Polly.Client.Console.Basic", "Microservices.Resilient.Polly.Client.Console.Basic\Microservices.Resilient.Polly.Client.Console.Basic.csproj", "{D9521771-7874-4953-959E-3466BE4F0B85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B3088C1-8ED7-48DB-8C47-B19E49FB8585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3088C1-8ED7-48DB-8C47-B19E49FB8585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3088C1-8ED7-48DB-8C47-B19E49FB8585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3088C1-8ED7-48DB-8C47-B19E49FB8585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AAC3308-ED62-40B8-9C85-70C9F60AF469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AAC3308-ED62-40B8-9C85-70C9F60AF469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AAC3308-ED62-40B8-9C85-70C9F60AF469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AAC3308-ED62-40B8-9C85-70C9F60AF469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9521771-7874-4953-959E-3466BE4F0B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9521771-7874-4953-959E-3466BE4F0B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9521771-7874-4953-959E-3466BE4F0B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9521771-7874-4953-959E-3466BE4F0B85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D149DFE-52CD-4DC9-87FA-38EF02BC22DD}
+	EndGlobalSection
+EndGlobal

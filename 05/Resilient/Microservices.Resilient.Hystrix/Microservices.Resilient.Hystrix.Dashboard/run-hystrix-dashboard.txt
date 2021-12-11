@@ -1,0 +1,9 @@
+﻿#Install JAVA 8 JDK
+
+mvn install
+java -jar target/hystrix-dashboard-0.0.1.BUILD-SNAPSHOT.jar
+
+http://localhost:7979/hystrix
+
+cargar en el stream del dashboard (solo http)
+http://localhost:10453/hystrix/hystrix.stream
