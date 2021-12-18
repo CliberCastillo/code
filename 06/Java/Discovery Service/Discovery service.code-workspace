@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "discovery-server"
+		},
+		{
+			"path": "client"
+		},
+		{
+			"path": "config-client-app"
+		},
+		{
+			"path": "config-server"
+		},
+		{
+			"path": "service"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}

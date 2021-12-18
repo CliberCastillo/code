@@ -1,0 +1,13 @@
+2021-12-11 15:42:32.1440|3|Warn|Raven.Database.Config.MemoryStatistics|Low memory detected, will try to reduce memory usage...
+2021-12-11 15:42:55.6762|12|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 15:43:50.0141|50|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.
+2021-12-11 15:47:13.6054|3|Warn|Raven.Database.Config.MemoryStatistics|Low memory detected, will try to reduce memory usage...
+2021-12-11 15:48:50.0026|54|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.
+2021-12-11 15:50:56.9622|42|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 15:51:08.5800|3|Warn|Raven.Database.Config.MemoryStatistics|Low memory detected, will try to reduce memory usage...
+2021-12-11 15:51:54.3676|53|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.
+2021-12-11 15:52:46.8437|3|Warn|Raven.Database.Config.MemoryStatistics|Low memory detected, will try to reduce memory usage...
+2021-12-11 15:52:54.5832|10|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 15:53:52.0609|55|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.
+2021-12-11 15:55:16.5401|11|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 15:56:13.9439|48|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.

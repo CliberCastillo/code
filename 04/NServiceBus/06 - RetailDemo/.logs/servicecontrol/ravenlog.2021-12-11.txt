@@ -1,0 +1,2 @@
+2021-12-11 16:00:41.2238|11|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 16:01:37.5074|43|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.

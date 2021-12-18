@@ -1,0 +1,22 @@
+2021-12-11 15:42:32.1810|3|Warn|Raven.Database.Config.MemoryStatistics|Low memory detected, will try to reduce memory usage...
+2021-12-11 15:42:56.2352|14|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 15:43:50.5916|61|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.
+2021-12-11 15:47:59.9091|12|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 15:48:50.5756|55|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.
+2021-12-11 15:50:58.9703|9|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 15:51:08.5790|3|Warn|Raven.Database.Config.MemoryStatistics|Low memory detected, will try to reduce memory usage...
+2021-12-11 15:51:08.7420|40|Error|Raven.Client.Changes.RemoteChangesClientBase`3|Got error from server connection for http://localhost on id 1/5e274w5AZsS/52iOQtTytsS
+System.AggregateException: One or more errors occurred. ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at Raven.Client.Connection.ObservableLineStream.<Start>b__8_0(Task`1 task)
+   at System.Threading.Tasks.Task.Execute()
+   --- End of inner exception stack trace ---
+---> (Inner Exception #0) System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at Raven.Client.Connection.ObservableLineStream.<Start>b__8_0(Task`1 task)
+   at System.Threading.Tasks.Task.Execute()<---
+
+2021-12-11 15:51:56.1223|41|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.
+2021-12-11 15:52:46.7997|3|Warn|Raven.Database.Config.MemoryStatistics|Low memory detected, will try to reduce memory usage...
+2021-12-11 15:52:56.3632|15|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 15:53:53.7974|59|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.
+2021-12-11 15:55:18.8097|12|Warn|Raven.Client.Connection.Async.AsyncServerClient|Was unable to fetch topology from primary node http://localhost also there is no cached topology
+2021-12-11 15:56:15.6808|14|Warn|Raven.Database.Plugins.Builtins.CheckFreeDiskSpace|Database disk (D:\) has less than 15% free space.
