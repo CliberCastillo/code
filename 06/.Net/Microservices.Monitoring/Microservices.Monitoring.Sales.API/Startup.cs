@@ -60,7 +60,7 @@ namespace Microservices.Monitoring.Sales.API
 
             services
                 .AddHealthChecks()
-                //.AddMemoryHealthCheck("Memory")
+                .AddMemoryHealthCheck("Memory")
                 .AddSqlServer(conStr)
                 .AddDbContextCheck<MicroservicesMonitoringContext>();
 
