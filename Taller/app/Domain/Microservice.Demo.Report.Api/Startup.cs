@@ -10,7 +10,14 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using MediatR;
+using Microservice.Demo.Report.Api.Application;
+using Microservice.Demo.Report.Api.Infrastructure.Data;
+using Microservices.Demo.Report.API.Infrastructure.Configuration;
+using Steeltoe.Discovery.Client;
+using Newtonsoft.Json.Serialization;
 
 namespace Microservice.Demo.Report.Api
 {
@@ -26,8 +33,16 @@ namespace Microservice.Demo.Report.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
+            services.AddDiscoveryClient(Configuration);
+            services.AddConfigurations(Configuration);
+            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddApplicationServices();
+            services.AddDataServices(Configuration);
+            services.AddControllers()
+                            .AddNewtonsoftJson(options =>
+                            {
+                                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Microservice.Demo.Report.Api", Version = "v1" });
@@ -43,7 +58,7 @@ namespace Microservice.Demo.Report.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Microservice.Demo.Report.Api v1"));
             }
-
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -54,6 +69,8 @@ namespace Microservice.Demo.Report.Api
             {
                 endpoints.MapControllers();
             });
+
+            app.UseDiscoveryClient();
         }
     }
 }

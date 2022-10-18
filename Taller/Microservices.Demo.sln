@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29709.97
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{B4726472-DF82-4944-90EA-8769378C0ED4}"
 EndProject
@@ -61,6 +61,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelot", "tools\Ocelot\Ocelot\Ocelot.csproj", "{DF38CF8D-BA70-4FEA-967B-D4A9D858F268}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Steeltoe.Extensions.Configuration.ConfigServerBase", "..\Steeltoe\src\Configuration\src\ConfigServerBase\Steeltoe.Extensions.Configuration.ConfigServerBase.csproj", "{D2865462-E578-4B6F-8CEB-D16E7D446C90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Demo.Report.Api", "app\Domain\Microservice.Demo.Report.Api\Microservice.Demo.Report.Api.csproj", "{2DC74A54-147F-470E-9E31-13649DAAE08E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -148,6 +150,10 @@ Global
 		{D2865462-E578-4B6F-8CEB-D16E7D446C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2865462-E578-4B6F-8CEB-D16E7D446C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2865462-E578-4B6F-8CEB-D16E7D446C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DC74A54-147F-470E-9E31-13649DAAE08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC74A54-147F-470E-9E31-13649DAAE08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC74A54-147F-470E-9E31-13649DAAE08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC74A54-147F-470E-9E31-13649DAAE08E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -176,6 +182,7 @@ Global
 		{C869153E-447C-4E40-A1B2-52C92FFD05A9} = {5EB62E7A-98FB-4010-BC32-31D102627359}
 		{DF38CF8D-BA70-4FEA-967B-D4A9D858F268} = {5EB62E7A-98FB-4010-BC32-31D102627359}
 		{D2865462-E578-4B6F-8CEB-D16E7D446C90} = {A9F0B201-A030-48F9-B390-213CF323C976}
+		{2DC74A54-147F-470E-9E31-13649DAAE08E} = {18B53A6A-73C2-4CA8-9B64-EBC8DE96F7BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77DDFB34-D1A7-4826-B16C-FCEA9CEF267F}

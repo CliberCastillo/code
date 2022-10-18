@@ -67,7 +67,21 @@
       },
       "DangerousAcceptAnyServerCertificateValidator": true
     },
-
+    {
+      "DownstreamPathTemplate": "/api/Report",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/Report",
+      "ServiceName": "Microservice.Demo.Report.API",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurityAuthenticationScheme",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "userType": "SALESMAN"
+      },
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
     {
       "DownstreamPathTemplate": "/api/Policies/{number}",
       "DownstreamScheme": "https",
